@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/general.css">
+    <link rel="stylesheet" href="./../css/home.css">
+    <title>TD</title>
+</head>
+<body>
+    <div id="verify">
+        <h2>4 digit code:</h2>
+        <input type="text" id="verify-input">
+        <button id="verify-button">check</button>
+    </div>
+    <header class="hidden">
+        <div>
+            <h1 id="header-text">
+                <span id="tord-t">T</span><span id="tord-o">o</span><span id="tord-r">r</span><span id="tord-d">D</span>
+            </h1>
+        </div>
+    </header>
+    <main class="hidden">
+        <div id="main-content-div">
+            <div id="choose">
+                <h1>Choose one:</h1>
+                <div id="the-choice">
+                    <button class="choice-buttons" id="truth">Truth</button>
+                    <p>or</p>
+                    <button class="choice-buttons" id="truth">Dare</button>
+                </div>
+            </div>
+            <div>
+                <h1 class="top-mar-10">Result:</h1>
+                <div id="result-box">
+                    <span id="result"></span>
+                </div>
+            </div>
+            <div>
+                <h2 class="top-mar-10">Filter:</h2>
+                <p>(for date)</p>
+                <div id="filter">
+                    <label>Filter (on/off)</label>
+                    <input id="filter-on-off" type="checkbox">
+                    <table>
+                        <tr>
+                            <th>
+                                Cond
+                            </th>
+                            <td>
+                                <input id="con" type="checkbox">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Cuff
+                            </th>
+                            <td>
+                                <input id="cuf" type="checkbox">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Blin
+                            </th>
+                            <td>
+                                <input id="bli" type="checkbox">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                Nothing
+                            </th>
+                            <td>
+                                <input id="not" type="checkbox">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="./../js/general.js"></script>
+    </main>
+</body>
+</html>

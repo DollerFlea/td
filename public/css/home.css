@@ -1,0 +1,51 @@
+.top-mar-10 {
+    margin-top: 10px;
+}
+
+/*CHOICE*/
+#the-choice {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#the-choice p {
+    font-size: 20px;
+}
+
+.choice-buttons {
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    border: solid 1px black;
+    background-color: rgb(238, 237, 237);
+    font-size: 20px;
+
+    transition: scale 0.2s;
+}
+.choice-buttons:hover {
+    background-color: gainsboro;
+    cursor: pointer;
+    scale: 1.02;
+}
+.choice-buttons:active {
+    background-color: rgb(205, 205, 205);
+}
+/*RESULT*/
+#result-box {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 240px;
+    border: solid 1px black;
+    border-radius: 10px;
+    padding: 8px;
+    min-height: 20px;
+    margin: 0 auto;
+}
+
+/*FILTER*/
+#filter table th, #filter table td {
+    text-align: left;
+    padding: 2px 6px;
+}
