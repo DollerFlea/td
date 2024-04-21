@@ -1,7 +1,6 @@
 //Import MODULES
 import express from "express";
 import mongoose from "mongoose";
-import cookieParser from "cookie-parser";
 import path from "path";
 import 'dotenv/config';
 
@@ -19,7 +18,6 @@ const app = express();
 
 
 //Middleware
-app.use(cookieParser());
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
