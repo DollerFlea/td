@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import { Dare, Truth } from "./db.js";
 
-async function addDare(dareStr, condBoo, cuffBoo, blinBoo, nothingBoo) {
+export async function addDare(dareStr, condBoo, cuffBoo, blinBoo, nothingBoo) {
     const newDare = new Dare({
         dare: dareStr,
         cond: condBoo,
@@ -17,7 +17,7 @@ async function addDare(dareStr, condBoo, cuffBoo, blinBoo, nothingBoo) {
         return false;
     };
 };
-async function editDare(id, updateObject) {
+export async function editDare(id, updateObject) {
     try {
         await Dare.findOneAndUpdate({ _id: id }, updateObject);
         return true;
@@ -25,7 +25,7 @@ async function editDare(id, updateObject) {
         return false;
     };
 };
-async function removeDare(id) {
+export async function removeDare(id) {
     try {
         await Dare.remove({ _id: id });
         return true;
@@ -34,7 +34,7 @@ async function removeDare(id) {
     };
 };
 
-async function addTruth(truthStr) {
+export async function addTruth(truthStr) {
     const newTruth = new Truth({
         truth: truthStr
     });
@@ -46,7 +46,7 @@ async function addTruth(truthStr) {
         return false;
     };
 };
-async function editTruth(id, updateObject) {
+export async function editTruth(id, updateObject) {
     try {
         await Truth.findOneAndUpdate({ _id: id }, updateObject);
         return true;
@@ -54,7 +54,7 @@ async function editTruth(id, updateObject) {
         return false;
     };
 };
-async function removeTruth(id) {
+export async function removeTruth(id) {
     try {
         await Truth.remove({ _id: id });
         return true;
@@ -63,7 +63,7 @@ async function removeTruth(id) {
     };
 };
 
-async function truth() {
+export async function truth() {
     try {
         const truthArr = await Truth.find();
         const truthObj = truthArr[Math.floor(Math.random()*truthArr.length)]
@@ -74,7 +74,7 @@ async function truth() {
         return false;
     };
 };
-async function dare() {
+export async function dare() {
     try {
         const dareArr = await Truth.find();
         const dareObj = dareArr[Math.floor(Math.random()*dareArr.length)]
@@ -85,7 +85,7 @@ async function dare() {
         return false;
     };
 };
-async function dareFilter(req) {
+export async function dareFilter(req) {
     try {
         const dareArr1 = await Truth.find();
 
@@ -99,7 +99,7 @@ async function dareFilter(req) {
         return false;
     };
 };
-async function random() {
+export async function random() {
     try {
         const randInt = Math.floor(Math.floor()*2);
         if (randInt === 0){
@@ -118,4 +118,3 @@ async function random() {
         return false;
     };
 };
-
